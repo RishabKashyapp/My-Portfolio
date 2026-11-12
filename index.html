@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#080d1c" />
+  <meta name="description" content="A simple personal portfolio." />
+  <title>Rishab Soni— Personal Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#0b1020;--panel:#121a2b;--line:#253149;--text:#f4f6fb;--muted:#aab4c5;--accent:#8bb8ff}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:"DM Sans",sans-serif}
+    a{color:inherit;text-decoration:none}.wrap{width:min(1040px,calc(100% - 40px));margin:auto}
+    nav{height:76px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+    .brand{font:700 20px "Space Grotesk";letter-spacing:-.6px}.brand span{color:var(--accent)}
+    .navlinks{display:flex;gap:25px;color:var(--muted);font-size:13px}.navlinks a:hover{color:var(--text)}
+    .hero{min-height:570px;display:grid;grid-template-columns:1.2fr .8fr;align-items:center;gap:45px;padding:65px 0 75px}
+    .eyebrow{display:inline-flex;align-items:center;gap:9px;padding:7px 11px;border:1px solid var(--line);border-radius:99px;color:var(--muted);font-size:12px}
+    .dot{width:7px;height:7px;border-radius:50%;background:#7dd6ae}
+    h1{font:700 clamp(46px,6vw,72px)/1.04 "Space Grotesk";letter-spacing:-3px;margin:22px 0 17px}
+    h1 .gradient{color:var(--accent)}
+    .intro{max-width:560px;color:var(--muted);font-size:16px;line-height:1.8}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+    .btn{padding:12px 17px;border-radius:9px;font-weight:700;font-size:13px;display:inline-flex;align-items:center;gap:8px;transition:background .2s,border-color .2s}
+    .btn.primary{background:var(--accent);color:#091222}.btn:not(.primary){border:1px solid var(--line);color:var(--text)}
+    .btn:hover{filter:brightness(1.08)}
+    .profile-shell {
+    width: 290px;
+    aspect-ratio: 3 / 4;
+    margin: auto;
+    display: grid;
+    place-items: center;
+    }   
+    .profile {
+    width: 100%;
+    height: 100%;
+    border-radius: 18px;
+    padding: 4px;
+    background: #263b5c;
+    border: 1px solid rgba(139,184,255,.35);
+    overflow: hidden;
+    }    
+    .profile img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 14px;
+    background: #18243a;
+    }    
+    .profile-fallback{height:100%;display:grid;place-items:center;border-radius:50%;font:700 68px "Space Grotesk";color:#c8d9f4;background:#18243a}
+    section{padding:58px 0}.section-head{margin-bottom:25px}.kicker{color:var(--accent);font-size:11px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase}
+    h2{font:700 32px "Space Grotesk";letter-spacing:-1px;margin:9px 0}.sub{color:var(--muted);line-height:1.7;margin:0}
+    .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+    .card{background:var(--panel);border:1px solid var(--line);border-radius:13px;padding:20px;transition:border-color .2s,transform .2s}
+    .card:hover{transform:translateY(-3px);border-color:#52698d}
+    .social-icon{width:35px;height:35px;border-radius:9px;display:grid;place-items:center;background:#1c2a43;color:var(--accent);font-weight:700;font-size:16px;margin-bottom:15px}
+    .card h3{font:600 16px "Space Grotesk";margin:0 0 6px}.card p{font-size:13px;color:var(--muted);margin:0 0 14px;overflow-wrap:anywhere}.card .visit{font-size:12px;color:var(--accent);font-weight:700}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.about-card{min-height:150px}.about-card p{color:var(--muted);line-height:1.8;font-size:14px}
+    footer{padding:25px 0 35px;border-top:1px solid var(--line);color:var(--muted);font-size:12px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    .reveal{opacity:0;transform:translateY(12px);transition:opacity .45s ease,transform .45s ease}.reveal.show{opacity:1;transform:none}
+    @media(max-width:760px){.hero{grid-template-columns:1fr;text-align:center;padding:55px 0 65px;gap:28px}.intro{margin:auto}.actions{justify-content:center}.profile-shell{width:250px}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.about-grid{grid-template-columns:1fr}.navlinks{gap:14px}}
+    @media(max-width:480px){.wrap{width:calc(100% - 30px)}nav{height:66px}.navlinks{font-size:11px;gap:11px}.hero{padding:45px 0 55px}h1{font-size:46px;letter-spacing:-2px}.intro{font-size:14px}.grid{grid-template-columns:1fr}section{padding:45px 0}h2{font-size:28px}.btn{padding:11px 14px;font-size:12px}}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+  </style>
+</head>
+<body>
+  <header class="wrap">
+    <nav><a class="brand" href="#">Rishab<span>Soni.</span></a><div class="navlinks"><a href="#about">About</a><a href="#links">Socials</a><a href="#contact">Contact</a></div></nav>
+  </header>
+  <main class="wrap">
+    <section class="hero">
+      <div class="reveal">
+        <div class="eyebrow"><span class="dot"></span> Available for opportunities</div>
+        <h1>Hey, I'm<br><span class="gradient">Rishab Soni.</span></h1>
+        <p class="intro">I'm a Computer Science student passionate about technology, programming, and innovation. Constantly learning, exploring new technologies, and building practical skills. Driven by curiosity, focused on growth, and inspired to create meaningful digital experiences.</p>
+        <div class="actions"><a class="btn primary" href="assets/resume.pdf" target="_blank" rel="noopener">↗ View my resume</a><a class="btn" href="#links">Explore my links ↓</a></div>
+      </div>
+      <div class="profile-shell reveal">
+        <div class="orbit"></div>
+        <div class="profile"><img src="PROFILE.png" alt="Your profile photo" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><div class="profile-fallback" style="display:none">YN</div></div>
+        <div class="float-tag tag-one">✦ Personal website</div><div class="float-tag tag-two">✦ Always learning</div>
+      </div>
+    </section>
+
+    <section id="about" class="reveal">
+      <div class="section-head"><div class="kicker">A little about me</div><h2>More than a profile.</h2><p class="sub">A curious mind, a passion for technology, and a constant drive to learn, create, and grow.</p></div>
+      <div class="about-grid">
+        <article class="card about-card"><h3>👋 Who I am</h3><p>I'm Rishab Soni, a Computer Science student passionate about technology, innovation, and continuous learning. I enjoy exploring new ideas, understanding how technology works, and challenging myself to grow both personally and professionally.</p></article>
+        <article class="card about-card"><h3>⚡ What I do</h3><p>I'm focused on developing my programming skills, exploring software development, and strengthening my problem-solving abilities. I enjoy learning new technologies, experimenting with ideas, and working towards building practical and meaningful projects.</p></article>
+      </div>
+    </section>
+
+    <section id="links" class="reveal">
+      <div class="section-head"><div class="kicker">Find me online</div><h2>Let's connect.</h2><p class="sub">My important profiles, collected in one place.</p></div>
+      <div class="grid">
+        <a class="card" href="https://www.linkedin.com/in/rishab-soni-a71221417/" target="_blank" rel="noopener"><div class="social-icon">in</div><h3>LinkedIn</h3><p>Your LinkedIn profile</p><span class="visit">Visit profile ↗</span></a>
+        <a class="card" href="https://www.instagram.com/rshb_snx/" target="_blank" rel="noopener"><div class="social-icon">◎</div><h3>Instagram</h3><p>@rshb_snx</p><span class="visit">Visit profile ↗</span></a>
+        <a class="card" href="https://www.facebook.com/floating.heart.792/" target="_blank" rel="noopener"><div class="social-icon">f</div><h3>Facebook</h3><p>My Facebook profile</p><span class="visit">Visit profile ↗</span></a>
+        <a class="card" href="https://wa.me/918797797788" target="_blank" rel="noopener"><div class="social-icon">◉</div><h3>WhatsApp</h3><p>Message me directly</p><span class="visit">Start a chat ↗</span></a>
+        <a class="card" href="https://github.com/RishabKashyapp" target="_blank" rel="noopener"><div class="social-icon">⌘</div><h3>GitHub</h3><p>Projects and code</p><span class="visit">View repositories ↗</span></a>
+        <a class="card" href="assets/resume.pdf" target="_blank" rel="noopener"><div class="social-icon">▤</div><h3>My Resume</h3><p>Experience, skills & education</p><span class="visit">Open PDF ↗</span></a>
+        <a class="card" href="mailto:sonirishab119"><div class="social-icon">✉</div><h3>Email</h3><p>Let's talk or collaborate</p><span class="visit">Send an email ↗</span></a>
+      </div>
+    </section>
+<section id="contact" class="reveal">
+      <div class="card" style="text-align:center;padding:38px 24px"><div class="kicker">Have something in mind?</div><h2>Let's make it happen.</h2><p class="sub">I'm always happy to connect, collaborate, and explore new ideas.</p><div class="actions" style="justify-content:center"><a class="btn primary" href="mailto:YOUR_EMAIL@example.com">Get in touch ↗</a></div></div>
+    </section>
+  </main>
+  <footer class="wrap"><span>© <span id="year"></span> Rishab Soni. Made with care.</span><span>Designed to make a good first impression ✦</span></footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const observer = new IntersectionObserver(entries => entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('show');observer.unobserve(e.target)}}),{threshold:.12});
+    document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+  </script>
+</body>
+</html>
